@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Venkata Manoj Kumar Gonugunta — Food QC &amp; NPD | London</title>
+<meta name="description" content="MSc Food Innovation graduate (University of Greenwich). Quality Control, HACCP, BRC Global Standards, allergen management, FIR 2011 labelling and New Product Development. London, UK.">
+<meta name="theme-color" content="#070806">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#070806;
+    --bg2:#0d0f0b;
+    --panel:#11140e;
+    --text:#f2f0e9;
+    --muted:#9a988e;
+    --line:rgba(242,240,233,.12);
+    --accent:#c6f44d;
+    --accent-soft:rgba(198,244,77,.14);
+    --max:1280px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:auto;overscroll-behavior:none;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  ::selection{background:var(--accent);color:#000}
+  h1,h2,h3,.display{font-family:'Syne',sans-serif;font-weight:800;line-height:1.04;letter-spacing:-.02em;text-transform:uppercase}
+  .serif{font-family:'Instrument Serif',serif;font-style:italic;text-transform:none;letter-spacing:0;font-weight:400}
+  .mono{font-family:'JetBrains Mono',monospace}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  @media(min-width:680px){.wrap{padding:0 40px}}
+
+  /* ============ preloader ============ */
+  #loader{
+    position:fixed;inset:0;z-index:1000;background:#050604;
+    display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;
+  }
+  #loader .l-name{font-family:'Syne',sans-serif;font-weight:700;letter-spacing:.3em;font-size:.78rem;text-transform:uppercase;color:var(--muted);text-align:center;padding:0 24px}
+  #loader .l-count{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(3.5rem,12vw,8rem);line-height:1;color:var(--text)}
+  #loader .l-count span{color:var(--accent)}
+  #loader .l-bar{width:min(360px,72vw);height:1px;background:var(--line);position:relative;overflow:hidden}
+  #loader .l-bar i{position:absolute;inset:0;background:var(--accent);transform:scaleX(0);transform-origin:left}
+
+  /* ============ progress + nav ============ */
+  #progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:120;background:transparent}
+  #progress i{display:block;height:100%;background:var(--accent);transform:scaleX(0);transform-origin:left}
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:110;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 24px;
+    background:linear-gradient(rgba(7,8,6,.78),transparent);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+  }
+  @media(min-width:680px){nav{padding:22px 40px}}
+  .nav-name{font-family:'Syne',sans-serif;font-weight:800;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase}
+  .nav-name b{color:var(--accent)}
+  .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+  .nav-links a{font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);transition:color .25s;min-height:36px;display:inline-flex;align-items:center}
+  .nav-links a:hover,.nav-links a:focus{color:var(--accent)}
+  .nav-pill{border:1px solid var(--accent);color:var(--accent)!important;border-radius:99px;padding:9px 18px;min-height:42px}
+  .nav-pill:hover{background:var(--accent);color:#000!important}
+  @media(max-width:900px){.nav-links li:not(.nav-cta){display:none}}
+
+  /* ============ HERO — full screen dot field ============ */
+  .hero{
+    position:relative;height:100svh;min-height:560px;overflow:hidden;
+    background:
+      radial-gradient(60% 40% at 22% 38%, rgba(120,80,200,.13), transparent 62%),
+      radial-gradient(55% 38% at 78% 30%, rgba(80,180,220,.10), transparent 62%),
+      radial-gradient(45% 35% at 65% 75%, rgba(198,244,77,.07), transparent 62%),
+      radial-gradient(35% 28% at 18% 78%, rgba(200,80,160,.07), transparent 65%),
+      radial-gradient(120% 100% at 50% 50%, #060815 0%, #02030a 100%);
+  }
+  #dotField{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .hero-overlay{
+    position:absolute;inset:0;pointer-events:none;
+    background:
+      /* milky way diagonal band */
+      linear-gradient(118deg, transparent 24%, rgba(180,160,230,.06) 42%, rgba(160,200,230,.05) 58%, transparent 76%),
+      /* top/bottom vignette */
+      radial-gradient(70% 35% at 50% 0%, rgba(2,3,10,.55), transparent 60%),
+      radial-gradient(70% 35% at 50% 100%, rgba(2,3,10,.85), transparent 65%);
+  }
+  .hero-cue{
+    position:absolute;left:0;right:0;bottom:28px;z-index:3;
+    display:flex;flex-direction:column;align-items:center;gap:10px;
+    color:var(--muted);font-size:.66rem;letter-spacing:.36em;text-transform:uppercase;
+    pointer-events:none;
+  }
+  .hero-cue .label{display:inline-flex;align-items:center;gap:10px}
+  .hero-cue .label::before,.hero-cue .label::after{content:"";width:24px;height:1px;background:rgba(198,244,77,.5)}
+  .hero-cue .line{width:1px;height:32px;background:linear-gradient(var(--accent),transparent);animation:drip 1.8s ease-in-out infinite}
+  @keyframes drip{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+  .hero-tagline{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,calc(-50% + 30vh));z-index:2;
+    font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(.9rem,2vw,1.1rem);
+    color:rgba(242,240,233,.55);letter-spacing:.04em;text-align:center;padding:0 24px;pointer-events:none;
+    text-transform:none;
+  }
+  @media(max-width:680px){.hero-tagline{transform:translate(-50%,calc(-50% + 32vh))}}
+
+  /* ============ INTRO — name pop-up ============ */
+  .intro{
+    position:relative;background:var(--bg);overflow:hidden;
+    padding:100px 24px 120px;
+  }
+  @media(min-width:680px){.intro{padding:140px 40px}}
+  .intro::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(50% 40% at 80% 20%, rgba(198,244,77,.06), transparent 60%),
+      radial-gradient(40% 35% at 15% 75%, rgba(198,244,77,.04), transparent 60%);
+    pointer-events:none;
+  }
+  .intro-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto;text-align:center}
+  .intro-kicker{
+    display:inline-flex;align-items:center;gap:12px;
+    font-size:.72rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);
+    margin-bottom:36px;
+  }
+  .intro-kicker::before,.intro-kicker::after{content:"";width:34px;height:1px;background:var(--accent)}
+  .big-name{
+    font-family:'Syne',sans-serif;font-weight:800;line-height:.96;letter-spacing:-.025em;
+    text-transform:uppercase;font-size:clamp(2.4rem,8vw,6.4rem);
+    display:flex;flex-direction:column;align-items:center;gap:6px;
+  }
+  .big-name .row{overflow:hidden;display:block;padding:0 .04em}
+  .big-name .row > span{display:block;will-change:transform}
+  .big-name .accent{color:var(--accent)}
+  .big-name .it{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-.01em;text-transform:none}
+  .intro-tag{
+    margin:30px auto 0;color:var(--muted);max-width:50ch;
+    font-family:'Instrument Serif',serif;font-style:italic;font-size:1.15rem;
+  }
+  .intro-tag b{color:var(--text);font-style:normal;font-family:'Inter',sans-serif;font-weight:600;background:linear-gradient(transparent 60%, var(--accent-soft) 60%);padding:0 3px}
+
+  .quick-nav{
+    margin-top:50px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;
+    max-width:980px;margin-left:auto;margin-right:auto;
+  }
+  .qn{
+    display:flex;flex-direction:column;align-items:flex-start;gap:6px;
+    padding:18px;border:1px solid var(--line);border-radius:14px;
+    background:rgba(13,15,11,.5);backdrop-filter:blur(6px);
+    transition:border-color .3s,background .3s,transform .3s;
+    text-align:left;min-height:110px;
+  }
+  .qn:hover,.qn:focus{border-color:var(--accent);background:rgba(20,25,12,.7);transform:translateY(-3px)}
+  .qn .n{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--accent);letter-spacing:.16em}
+  .qn .l{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:-.01em;text-transform:uppercase;line-height:1.1}
+  .qn .s{font-size:.74rem;color:var(--muted);line-height:1.4}
+  .qn .arr{margin-top:auto;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  .qn .arr::after{content:" →";transition:transform .3s}
+  @media(max-width:780px){
+    .quick-nav{grid-template-columns:1fr 1fr;gap:10px;margin-top:36px}
+    .qn{min-height:auto;padding:14px}
+    .qn .s{display:none}
+  }
+  @media(max-width:420px){.quick-nav{grid-template-columns:1fr}}
+
+  /* ============ MARQUEE ============ */
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;overflow:hidden;background:var(--bg2)}
+  .m-track{display:flex;gap:48px;width:max-content;will-change:transform;animation:slide 38s linear infinite}
+  .m-track span{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:48px;white-space:nowrap}
+  .m-track span i{font-style:normal;color:var(--accent)}
+  @keyframes slide{to{transform:translateX(-50%)}}
+
+  /* ============ Section scaffolding ============ */
+  section{position:relative}
+  .sec-head{padding:88px 0 48px}
+  @media(min-width:760px){.sec-head{padding:120px 0 60px}}
+  .sec-tag{font-size:.7rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px;margin-bottom:20px}
+  .sec-tag::before{content:"";width:32px;height:1px;background:var(--accent)}
+  .sec-title{font-size:clamp(1.85rem,5vw,3.4rem)}
+  .sec-title .serif{color:var(--accent)}
+  .sec-sub{color:var(--muted);max-width:60ch;margin-top:18px;font-size:1rem}
+  .fade-up{will-change:transform,opacity}
+
+  /* ============ ABOUT ============ */
+  .about{background:var(--bg2)}
+  .about-grid{display:grid;grid-template-columns:1fr;gap:50px;align-items:center;padding-bottom:90px}
+  @media(min-width:880px){.about-grid{grid-template-columns:1.05fr .95fr;gap:70px;padding-bottom:110px}}
+  .about-img{
+    position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;
+    border:1px solid var(--line);max-width:520px;justify-self:center;width:100%;
+  }
+  .about-img .img{
+    position:absolute;inset:-12%;
+    background:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=2400&q=80') center/cover;
+    will-change:transform;
+  }
+  .about-img figcaption{
+    position:absolute;left:18px;bottom:16px;z-index:2;font-size:.7rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--text);background:rgba(7,8,6,.6);backdrop-filter:blur(6px);
+    padding:8px 14px;border-radius:99px;border:1px solid var(--line);
+  }
+  .about-copy p{color:var(--muted);margin-bottom:20px;font-size:1rem}
+  .about-copy p b{color:var(--text)}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:30px}
+  .stat{background:var(--panel);padding:20px 14px;text-align:center}
+  .stat b{display:block;font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;color:var(--accent)}
+  .stat small{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  /* ============ EXPERIENCE ============ */
+  .experience{background:var(--bg)}
+  .exp-card{
+    background:linear-gradient(160deg, rgba(20,22,15,.9), rgba(13,15,11,.6));
+    border:1px solid var(--line);border-radius:20px;padding:28px;
+    backdrop-filter:blur(10px);position:relative;overflow:hidden;
+    margin-bottom:90px;
+  }
+  @media(min-width:760px){.exp-card{padding:50px}}
+  .exp-card::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:linear-gradient(var(--accent),transparent);
+  }
+  .exp-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:start;margin-bottom:14px}
+  .exp-role{font-size:clamp(1.3rem,3vw,2rem);margin-bottom:4px}
+  .exp-where{color:var(--accent);font-family:'Instrument Serif',serif;font-style:italic;font-size:1.1rem}
+  .exp-dates{
+    font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);border:1px solid var(--line);padding:8px 14px;border-radius:99px;white-space:nowrap;
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .exp-dates b{color:var(--accent);font-weight:500}
+  .exp-tagline{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.15rem;color:rgba(242,240,233,.85);max-width:62ch;margin:18px 0 30px}
+  .exp-grid{display:grid;grid-template-columns:1fr;gap:22px;margin-bottom:24px}
+  @media(min-width:680px){.exp-grid{grid-template-columns:1fr 1fr;gap:24px 36px}}
+  .exp-block h4{
+    font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:10px;
+  }
+  .exp-block ul{padding-left:18px;display:grid;gap:7px}
+  .exp-block li{font-size:.92rem;color:rgba(242,240,233,.85)}
+  .exp-block li b{color:var(--text)}
+  .exp-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px}
+  .ptag{font-size:.72rem;font-weight:500;background:rgba(198,244,77,.08);border:1px solid rgba(198,244,77,.3);padding:6px 12px;border-radius:99px;color:#e6ffb0}
+
+  /* ============ horizontal slider ============ */
+  .hwrap{position:relative;overflow:hidden;background:var(--bg)}
+  .htrack{display:block;will-change:transform}
+  .hpanel{position:relative;width:100%;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+  html.hslide .htrack{display:flex;width:max-content}
+  html.hslide .hpanel{width:100vw;flex:0 0 auto}
+  .hpanel .pbg{position:absolute;inset:0;background-position:center;background-size:cover;will-change:transform;scale:1.06}
+  .hpanel::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(7,8,6,.3), rgba(7,8,6,.94) 78%)}
+  .pcontent{position:relative;z-index:2;padding:0 24px 9vh;max-width:780px}
+  @media(min-width:680px){.pcontent{padding:0 6vw 9vh}}
+  .pnum{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(3.4rem,9vw,7rem);color:transparent;-webkit-text-stroke:1px rgba(242,240,233,.35);line-height:1}
+  .pcontent h3{font-size:clamp(1.4rem,3.6vw,2.6rem);margin:10px 0 14px}
+  .pcontent h3 em{font-family:'Instrument Serif',serif;font-style:italic;text-transform:none;color:var(--accent);font-weight:400}
+  .pcontent p{color:rgba(242,240,233,.78);max-width:54ch;font-size:.94rem}
+  .ptags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .ptag-light{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(242,240,233,.3);padding:6px 12px;border-radius:99px;color:var(--text)}
+  .hint{position:absolute;top:24px;right:24px;z-index:3;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+
+  /* ============ CASE STUDIES ============ */
+  .case-sec{background:var(--bg2)}
+  .case{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;border-top:1px solid var(--line)}
+  .case .cbg{position:absolute;inset:-10% 0;background-position:center;background-size:cover;will-change:transform}
+  .case::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg, rgba(7,8,6,.96) 40%, rgba(7,8,6,.6) 100%)}
+  .case-inner{position:relative;z-index:2;width:100%;max-width:var(--max);margin:0 auto;padding:90px 24px}
+  @media(min-width:760px){.case-inner{padding:120px 40px}}
+  .case-kicker{font-size:.7rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+  .case h3{font-size:clamp(2rem,6vw,4rem);margin-bottom:12px}
+  .case .tagline{font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(1.1rem,2.2vw,1.4rem);color:rgba(242,240,233,.85);max-width:46ch;margin-bottom:38px}
+  .case-cols{display:grid;grid-template-columns:1fr;gap:16px;max-width:880px}
+  @media(min-width:680px){.case-cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}}
+  .ccard{background:rgba(13,15,11,.72);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:22px;will-change:transform,opacity}
+  @media(min-width:680px){.ccard{padding:26px}}
+  .ccard h4{font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .ccard p,.ccard li{font-size:.92rem;color:rgba(242,240,233,.82)}
+  .ccard ul{padding-left:16px;display:grid;gap:7px}
+
+  /* ============ THESIS ============ */
+  .thesis{background:var(--bg);position:relative;overflow:hidden}
+  .thesis::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 30% at 10% 30%, rgba(198,244,77,.08), transparent 60%),radial-gradient(35% 30% at 90% 70%, rgba(198,244,77,.06), transparent 60%);pointer-events:none}
+  .thesis-grid{display:grid;grid-template-columns:1fr;gap:36px;padding-bottom:100px;position:relative;z-index:1}
+  @media(min-width:920px){.thesis-grid{grid-template-columns:1.2fr 1fr;gap:54px;align-items:center}}
+  .thesis-doc{position:relative;background:#f7f5ee;color:#1a1812;border-radius:14px;padding:36px 26px;box-shadow:0 30px 80px -20px rgba(0,0,0,.7);transform-origin:center}
+  @media(min-width:760px){.thesis-doc{padding:60px 50px}}
+  .thesis-doc::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(90deg,#c6f44d 0 16px,transparent 16px 32px);border-radius:14px 14px 0 0}
+  .thesis-doc .doc-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#8a8678;border-bottom:1px solid rgba(0,0,0,.1);padding-bottom:14px;margin-bottom:24px}
+  .thesis-doc .doc-meta b{color:#1a1812}
+  .thesis-doc .doc-eyebrow{font-size:.66rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:#3a6a2a;margin-bottom:18px}
+  .thesis-doc .doc-title{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;font-size:clamp(1.3rem,3vw,2rem);line-height:1.28;color:#1a1812;letter-spacing:-.01em;text-transform:none;margin-bottom:24px}
+  .thesis-doc .doc-title b{font-style:normal;font-family:'Syne',sans-serif;font-weight:700;text-transform:uppercase;background:linear-gradient(transparent 60%, rgba(198,244,77,.5) 60%);padding:0 4px}
+  .thesis-doc .doc-abstract{font-size:.88rem;color:#3a3830;line-height:1.7;max-width:60ch}
+  .thesis-doc .doc-footer{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px}
+  .thesis-doc .doc-footer .kw{font-size:.66rem;letter-spacing:.06em;background:#1a1812;color:#f7f5ee;padding:5px 10px;border-radius:4px;font-family:'JetBrains Mono',monospace;text-transform:uppercase}
+  .thesis-side h2{margin-bottom:16px}
+  .thesis-side p{color:rgba(242,240,233,.82);margin-bottom:14px}
+  .thesis-side .what{margin-top:24px;display:grid;gap:14px}
+  .thesis-side .what .item{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(20,22,15,.5)}
+  .thesis-side .what .item b{font-family:'Syne',sans-serif;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);min-width:84px}
+  .thesis-side .what .item span{font-size:.86rem;color:rgba(242,240,233,.82)}
+
+  /* ============ SKILLS ============ */
+  .skills{background:var(--bg2)}
+  .skills-grid{display:grid;grid-template-columns:1fr;gap:18px;padding-bottom:90px}
+  @media(min-width:820px){.skills-grid{grid-template-columns:repeat(2,1fr);gap:22px;padding-bottom:110px}}
+  .tilt{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;transform-style:preserve-3d;will-change:transform;transition:border-color .3s}
+  @media(min-width:760px){.tilt{padding:34px}}
+  .tilt:hover{border-color:rgba(198,244,77,.5)}
+  .tilt .glare{position:absolute;inset:0;border-radius:18px;pointer-events:none;background:radial-gradient(520px circle at var(--gx,50%) var(--gy,50%), rgba(198,244,77,.08), transparent 55%)}
+  .tilt h3{font-size:1.1rem;margin-bottom:16px;transform:translateZ(26px)}
+  .tilt .num{position:absolute;top:24px;right:28px;font-family:'Syne',sans-serif;font-weight:800;color:transparent;-webkit-text-stroke:1px rgba(242,240,233,.25);font-size:1.5rem}
+  .tilt .ptags{transform:translateZ(16px);display:flex;flex-wrap:wrap;gap:7px}
+  .tilt .ptag{border-color:rgba(242,240,233,.22);background:rgba(242,240,233,.04);color:var(--muted)}
+
+  /* ============ EDUCATION ============ */
+  .edu{position:relative;min-height:62svh;display:flex;align-items:center;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .edu .ebg{position:absolute;inset:-12% 0;background:url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=3840&q=80') center/cover;will-change:transform}
+  .edu::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(7,8,6,.82), rgba(7,8,6,.94))}
+  .edu-inner{position:relative;z-index:2;width:100%;max-width:var(--max);margin:0 auto;padding:80px 24px}
+  @media(min-width:760px){.edu-inner{padding:100px 40px}}
+  .edu-inner h3{font-size:clamp(1.6rem,4.5vw,2.8rem);margin:14px 0 6px}
+  .edu-inner .where{font-family:'Instrument Serif',serif;font-style:italic;font-size:1.15rem;color:var(--accent);margin-bottom:24px}
+  .edu-points{display:grid;grid-template-columns:1fr;gap:18px;max-width:960px}
+  @media(min-width:760px){.edu-points{grid-template-columns:repeat(3,1fr)}}
+  .edu-points div{border-left:1px solid rgba(198,244,77,.5);padding-left:16px;font-size:.88rem;color:rgba(242,240,233,.8)}
+
+  /* ============ CONTACT ============ */
+  .contact{padding:110px 24px 80px;text-align:center;position:relative;overflow:hidden}
+  @media(min-width:760px){.contact{padding:140px 40px 90px}}
+  .contact .big{font-size:clamp(2.2rem,8vw,6rem);line-height:1;margin-bottom:30px;font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-.02em;text-transform:uppercase}
+  .contact .big .row{overflow:hidden;display:block;padding:0 .04em}
+  .contact .big .row > span{display:block}
+  .contact .big .serif{color:var(--accent)}
+  .contact p{color:var(--muted);max-width:46ch;margin:0 auto 36px}
+  .btn-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .btn{position:relative;display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:13px 26px;border-radius:99px;font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;overflow:hidden;transition:color .3s,border-color .3s,background .3s,transform .2s}
+  .btn-solid{background:var(--accent);color:#0a0c05}
+  .btn-solid:hover{background:#dbff70}
+  .btn-line{border:1px solid rgba(242,240,233,.35);color:var(--text)}
+  .btn-line:hover{border-color:var(--accent);color:var(--accent)}
+  footer{border-top:1px solid var(--line);padding:24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  @media(min-width:760px){footer{padding:28px 40px}}
+
+  @media (prefers-reduced-motion:reduce){
+    .hero-cue .line{animation:none}
+    *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  }
+</style>
+</head>
+<body>
+
+<div id="loader" aria-hidden="true">
+  <div class="l-name">V·M·K Gonugunta — Food QC &amp; NPD</div>
+  <div class="l-count"><span id="lnum">0</span><span>%</span></div>
+  <div class="l-bar"><i id="lbar"></i></div>
+</div>
+
+<div id="progress"><i></i></div>
+
+<nav>
+  <a class="nav-name" href="#top">VMK<b>.</b>G</a>
+  <ul class="nav-links">
+    <li><a href="#intro">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#arsenal">QC Arsenal</a></li>
+    <li><a href="#work">Case Studies</a></li>
+    <li><a href="#thesis">Thesis</a></li>
+    <li class="nav-cta"><a class="nav-pill" href="#contact">Hire me</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HERO — full-screen dot field ================= -->
+<header class="hero" id="top">
+  <canvas id="dotField" aria-label="Particles morphing through food industry shapes and QC keywords"></canvas>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <p class="hero-tagline">— quality, in motion.</p>
+  <div class="hero-cue" aria-hidden="true">
+    <span class="label">Scroll to begin</span>
+    <span class="line"></span>
+  </div>
+</header>
+
+<!-- ================= INTRO — name pops up on scroll ================= -->
+<section class="intro" id="intro">
+  <div class="intro-inner">
+    <p class="intro-kicker fade-up">Food QC · NPD · London, UK</p>
+    <h1 class="big-name">
+      <span class="row"><span>Venkata</span></span>
+      <span class="row"><span class="it accent">Manoj Kumar</span></span>
+      <span class="row"><span>Gonugunta</span></span>
+    </h1>
+    <p class="intro-tag fade-up">MSc Food Innovation — University of Greenwich.<br>I treat <b>food safety</b> as a craft and <b>NPD</b> as a discipline.</p>
+
+    <div class="quick-nav">
+      <a class="qn fade-up" href="#about"><span class="n">01</span><span class="l">Profile</span><span class="s">Two paragraphs.</span><span class="arr">Open</span></a>
+      <a class="qn fade-up" href="#experience"><span class="n">02</span><span class="l">Experience</span><span class="s">McDonald's UK — live food safety.</span><span class="arr">Open</span></a>
+      <a class="qn fade-up" href="#arsenal"><span class="n">03</span><span class="l">QC Arsenal</span><span class="s">HACCP, allergen, FIR 2011.</span><span class="arr">Open</span></a>
+      <a class="qn fade-up" href="#work"><span class="n">04</span><span class="l">Case Studies</span><span class="s">Kindle Cracker · PlantPalate.</span><span class="arr">Open</span></a>
+      <a class="qn fade-up" href="#thesis"><span class="n">05</span><span class="l">Thesis</span><span class="s">Dairy retail · rural India.</span><span class="arr">Open</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="m-track">
+    <span>HACCP <i>◆</i> CCP MONITORING <i>◆</i> BRC GLOBAL STANDARDS <i>◆</i> GMP <i>◆</i> ALLERGEN MANAGEMENT <i>◆</i> NATASHA'S LAW <i>◆</i> FIR 2011 <i>◆</i> TRACEABILITY <i>◆</i> FIFO <i>◆</i> CAPA <i>◆</i> NCR <i>◆</i> TACCP / VACCP <i>◆</i> INTERNAL AUDITS <i>◆</i> CALIBRATION <i>◆</i> SENSORY <i>◆</i></span>
+    <span>HACCP <i>◆</i> CCP MONITORING <i>◆</i> BRC GLOBAL STANDARDS <i>◆</i> GMP <i>◆</i> ALLERGEN MANAGEMENT <i>◆</i> NATASHA'S LAW <i>◆</i> FIR 2011 <i>◆</i> TRACEABILITY <i>◆</i> FIFO <i>◆</i> CAPA <i>◆</i> NCR <i>◆</i> TACCP / VACCP <i>◆</i> INTERNAL AUDITS <i>◆</i> CALIBRATION <i>◆</i> SENSORY <i>◆</i></span>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-tag">Profile</p>
+      <h2 class="sec-title fade-up">Safety is a <span class="serif">craft,</span><br>not a checkbox</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="fade-up">Most graduates list standards. <b>I apply them.</b> During my MSc at the
+        University of Greenwich I carried two products end-to-end — a lab-developed cracker
+        and a plant-based ready-meal concept — making the safety, labelling and sourcing
+        decisions a technical team makes before anything reaches a shelf.</p>
+        <p class="fade-up">My discipline: <b>hazard thinking from the first ingredient</b>, evidence
+        from every trial, and labels that survive scrutiny — <b>QUID, allergen emphasis,
+        nutrition declarations</b> — under UK and EU food information law. I also work
+        part-time at McDonald's UK, applying that same discipline shift by shift.</p>
+        <div class="stats fade-up">
+          <div class="stat"><b data-count="2">0</b><small>End-to-end NPD projects</small></div>
+          <div class="stat"><b data-count="14">0</b><small>UK allergens managed</small></div>
+          <div class="stat"><b data-count="365">0</b><small>Days of live food safety practice</small></div>
+        </div>
+      </div>
+      <figure class="about-img fade-up">
+        <div class="img"></div>
+        <figcaption>Field of work — food, examined closely</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="experience" id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-tag">Experience</p>
+      <h2 class="sec-title fade-up">Food safety, <span class="serif">on the shift</span></h2>
+      <p class="sec-sub fade-up">My academic training is grounded in a real food-service
+      operation. I work part-time at one of the most heavily audited food businesses
+      in the world.</p>
+    </div>
+
+    <article class="exp-card fade-up">
+      <div class="exp-head">
+        <div>
+          <h3 class="exp-role">Crew Member — Front of House &amp; Kitchen</h3>
+          <p class="exp-where">McDonald's UK · London</p>
+        </div>
+        <span class="exp-dates">Sep 2024 — <b>Present</b></span>
+      </div>
+      <p class="exp-tagline">"Where my MSc stops being theory and starts being a shift checklist."</p>
+
+      <div class="exp-grid">
+        <div class="exp-block">
+          <h4>Daily QC &amp; food safety practice</h4>
+          <ul>
+            <li><b>Time–temperature control:</b> probing holding cabinets, fridges and freezers against critical limits — exactly the CCP monitoring I learned in HACCP class.</li>
+            <li><b>Holding time discipline:</b> tracking and discarding product past its time-on-line — a real shelf-life control, every shift.</li>
+            <li><b>Allergen separation:</b> dedicated utensils, prep zones and customer flagging — Natasha's Law applied to a live counter, not a textbook.</li>
+            <li><b>Cross-contamination control:</b> glove changes, handwash frequency, raw/cooked discipline — GMP turned into muscle memory.</li>
+          </ul>
+        </div>
+        <div class="exp-block">
+          <h4>Process &amp; due diligence habits</h4>
+          <ul>
+            <li><b>FIFO stock rotation</b> and date-code checks at intake and during prep — the same traceability mindset I'd bring to a goods-in role.</li>
+            <li><b>Pre-opening and shift-handover checks</b> — start-up inspections, equipment status, sanitation sign-offs.</li>
+            <li><b>Cleaning &amp; sanitation schedules</b> against a documented plan — pre-requisite programmes (PRPs) in real-world rhythm.</li>
+            <li><b>Customer-facing food safety:</b> handling allergen queries calmly and accurately under time pressure.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-block">
+        <h4>QC vocabulary in daily use</h4>
+        <div class="exp-tags">
+          <span class="ptag">CCP monitoring</span>
+          <span class="ptag">Time–temperature control</span>
+          <span class="ptag">Holding time</span>
+          <span class="ptag">Allergen segregation</span>
+          <span class="ptag">FIFO</span>
+          <span class="ptag">Date code verification</span>
+          <span class="ptag">Pre-op checks</span>
+          <span class="ptag">Sanitation schedules</span>
+          <span class="ptag">GMP</span>
+          <span class="ptag">PRPs</span>
+          <span class="ptag">Due diligence records</span>
+          <span class="ptag">Shift handover</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= QC ARSENAL ================= -->
+<section class="hwrap" id="arsenal">
+  <span class="hint">Scroll → it slides</span>
+  <div class="htrack" id="htrack">
+    <article class="hpanel">
+      <div class="pbg" style="background-image:url('https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=3840&q=80')"></div>
+      <div class="pcontent">
+        <div class="pnum">01</div>
+        <h3>HACCP — <em>hazards, controlled</em></h3>
+        <p>Hazard analysis and critical control points designed into the product plan from
+        ingredient intake onward — and applied every shift at McDonald's: probes, holding
+        times, allergen flow.</p>
+        <div class="ptags"><span class="ptag-light">Hazard analysis</span><span class="ptag-light">CCP monitoring</span><span class="ptag-light">Critical limits</span></div>
+      </div>
+    </article>
+    <article class="hpanel">
+      <div class="pbg" style="background-image:url('https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=3840&q=80')"></div>
+      <div class="pcontent">
+        <div class="pnum">02</div>
+        <h3>Allergens — <em>Natasha's Law, lived</em></h3>
+        <p>14 UK-regulated allergens: declaration, emphasis in ingredient lists, PPDS
+        labelling discipline — and the calm under-pressure allergen flagging I do at a
+        live counter every week.</p>
+        <div class="ptags"><span class="ptag-light">14 allergens</span><span class="ptag-light">PPDS labelling</span><span class="ptag-light">Cross-contact</span></div>
+      </div>
+    </article>
+    <article class="hpanel">
+      <div class="pbg" style="background-image:url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=3840&q=80')"></div>
+      <div class="pcontent">
+        <div class="pnum">03</div>
+        <h3>Labelling — <em>FIR 2011, to the letter</em></h3>
+        <p>Full back-of-pack builds: ingredient order, QUID percentages, allergen emphasis,
+        mandatory particulars and verified nutrition declarations — retail-standard
+        artwork that survives technical review.</p>
+        <div class="ptags"><span class="ptag-light">QUID</span><span class="ptag-light">Nutrition declaration</span><span class="ptag-light">EU 1169/2011</span></div>
+      </div>
+    </article>
+    <article class="hpanel">
+      <div class="pbg" style="background-image:url('https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=3840&q=80')"></div>
+      <div class="pcontent">
+        <div class="pnum">04</div>
+        <h3>Evidence — <em>GMP, FIFO &amp; CAPA</em></h3>
+        <p>Documented formulation trials, batch records, FIFO stock rotation,
+        non-conformance &amp; CAPA thinking. If something changes, there's a paper trail —
+        the habit BRC Global Standards audits are built on.</p>
+        <div class="ptags"><span class="ptag-light">Batch records</span><span class="ptag-light">FIFO</span><span class="ptag-light">CAPA / NCR</span><span class="ptag-light">BRCGS mindset</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= CASE STUDIES ================= -->
+<section class="case-sec" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-tag">Selected work</p>
+      <h2 class="sec-title fade-up">Two products,<br>taken <span class="serif">seriously</span></h2>
+      <p class="sec-sub fade-up">End-to-end MSc projects at the University of Greenwich —
+      presented honestly as academic work, executed to industry standards.</p>
+    </div>
+  </div>
+
+  <article class="case">
+    <div class="cbg" style="background-image:url('https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=3840&q=80')"></div>
+    <div class="case-inner">
+      <p class="case-kicker">Case study 01 — Lab-developed product</p>
+      <h3 class="fade-up">Kindle Cracker</h3>
+      <p class="tagline fade-up">From bench-top formulation to a retail-ready,
+      FIR 2011-compliant label — with the QC evidence trail to back every claim.</p>
+      <div class="case-cols">
+        <div class="ccard"><h4>The challenge</h4>
+          <p>Develop a savoury cracker in the lab and carry it through the full NPD cycle:
+          a stable, repeatable formulation, a verified nutrition declaration, and packaging
+          copy compliant with UK food information law.</p></div>
+        <div class="ccard"><h4>My approach</h4>
+          <ul><li>Iterative formulation trials with documented ratios, parameters and bake outcomes</li>
+          <li>Sensory analysis to score texture, flavour and appearance between iterations</li>
+          <li>Nutritional profiling translated into a compliant back-of-pack declaration</li>
+          <li>Label designed end-to-end: ingredient order, QUID, allergen emphasis</li></ul></div>
+        <div class="ccard"><h4>QC &amp; safety methods</h4>
+          <div class="exp-tags"><span class="ptag">Formulation trials</span><span class="ptag">Sensory evaluation</span><span class="ptag">Nutritional profiling</span><span class="ptag">FIR 2011</span><span class="ptag">Allergen declaration</span><span class="ptag">GMP</span><span class="ptag">Traceability</span></div></div>
+        <div class="ccard"><h4>Outcome</h4>
+          <p>A finished, label-ready product with a documented formulation history and a
+          retail-standard label — the same evidence pack a technical team expects before launch.</p></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="case">
+    <div class="cbg" style="background-image:url('https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&w=3840&q=80')"></div>
+    <div class="case-inner">
+      <p class="case-kicker">Case study 02 — Plant-based ready-meal concept</p>
+      <h3 class="fade-up">PlantPalate</h3>
+      <p class="tagline fade-up">Built like a real launch: HACCP-aligned sourcing, market
+      positioning, consumer insight and sustainable packaging.</p>
+      <div class="case-cols">
+        <div class="ccard"><h4>The challenge</h4>
+          <p>Design a plant-based ready meal that could credibly compete in the UK chilled
+          aisle — safety planning from sourcing onward, a defensible market position, and
+          packaging that supports shelf life and sustainability claims.</p></div>
+        <div class="ccard"><h4>My approach</h4>
+          <ul><li>HACCP-aligned supply mapping: hazards and controls at ingredient intake</li>
+          <li>Competitor benchmarking on price, claims, nutrition and pack format</li>
+          <li>SWOT analysis and a consumer persona anchoring every product decision</li>
+          <li>Full 4Ps marketing mix and a sustainable packaging design</li></ul></div>
+        <div class="ccard"><h4>QC &amp; safety methods</h4>
+          <div class="exp-tags"><span class="ptag">HACCP-aligned sourcing</span><span class="ptag">Supplier risk</span><span class="ptag">Benchmarking</span><span class="ptag">SWOT</span><span class="ptag">Consumer persona</span><span class="ptag">4Ps</span><span class="ptag">Sustainable packaging</span></div></div>
+        <div class="ccard"><h4>Outcome</h4>
+          <p>A launch-ready concept dossier covering safety, market and packaging — proof I
+          think beyond the lab bench to the commercial realities of getting onto shelf.</p></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ================= THESIS ================= -->
+<section class="thesis" id="thesis">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-tag">Research</p>
+      <h2 class="sec-title fade-up">My <span class="serif">thesis</span></h2>
+    </div>
+
+    <div class="thesis-grid">
+      <div class="thesis-doc fade-up">
+        <div class="doc-meta">
+          <span>MSc Food Innovation · <b>University of Greenwich</b></span>
+          <span>Dissertation · 2024</span>
+        </div>
+        <p class="doc-eyebrow">— Research Thesis</p>
+        <p class="doc-title">
+          <b>Current safety and regulatory requirements</b> and practices for
+          <b>small-scale dairy retail in rural India</b>: a study of compliance
+          and challenges to <b>reducing foodborne illness</b>.
+        </p>
+        <p class="doc-abstract">An applied investigation into the gap between national
+        dairy regulations and on-the-ground retail practice in rural India — mapping how
+        unorganised, small-scale vendors handle hygiene, temperature control and labelling,
+        and where the levers to reduce foodborne illness actually sit.</p>
+        <div class="doc-footer">
+          <span class="kw">Food Safety</span>
+          <span class="kw">Regulatory Compliance</span>
+          <span class="kw">Dairy</span>
+          <span class="kw">Rural Retail</span>
+          <span class="kw">Foodborne Illness</span>
+          <span class="kw">Field Research</span>
+        </div>
+      </div>
+
+      <div class="thesis-side">
+        <h2 class="sec-title">Why this <span class="serif">matters</span></h2>
+        <p>Dairy is one of India's largest food categories — and one of the most complex to
+        regulate at retail level. My thesis goes where the audits don't: small-scale,
+        rural-facing vendors, where compliance is patchier and foodborne risk is highest.</p>
+        <p>It is the same instinct I bring to industry work: <b>look where the gap between
+        policy and practice actually lives.</b></p>
+        <div class="what">
+          <div class="item"><b>Focus</b><span>Compliance gaps in small-scale dairy retail</span></div>
+          <div class="item"><b>Method</b><span>Regulatory mapping + retail practice review</span></div>
+          <div class="item"><b>Lens</b><span>Pathway to reducing foodborne illness</span></div>
+          <div class="item"><b>Output</b><span>MSc Food Innovation dissertation, University of Greenwich</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="skills" id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-tag">Capability</p>
+      <h2 class="sec-title fade-up">The <span class="serif">toolkit</span></h2>
+      <p class="sec-sub fade-up">The vocabulary recruiters search for — and the things I can speak to in interviews.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="tilt"><span class="num">01</span><div class="glare"></div>
+        <h3>Quality &amp; compliance</h3>
+        <div class="ptags"><span class="ptag">Quality Control</span><span class="ptag">Quality Assurance</span><span class="ptag">HACCP</span><span class="ptag">CCP monitoring</span><span class="ptag">BRCGS</span><span class="ptag">GMP / PRPs</span><span class="ptag">Internal audits</span><span class="ptag">Food safety mgmt</span><span class="ptag">Traceability</span><span class="ptag">Due diligence</span><span class="ptag">TACCP / VACCP</span></div></div>
+      <div class="tilt"><span class="num">02</span><div class="glare"></div>
+        <h3>Daily QC vocabulary</h3>
+        <div class="ptags"><span class="ptag">Pre-op checks</span><span class="ptag">Time-temperature control</span><span class="ptag">Holding times</span><span class="ptag">FIFO</span><span class="ptag">Date code checks</span><span class="ptag">Calibration</span><span class="ptag">Non-conformance (NCR)</span><span class="ptag">CAPA</span><span class="ptag">Root-cause analysis</span><span class="ptag">Environmental swabbing</span><span class="ptag">Foreign body control</span></div></div>
+      <div class="tilt"><span class="num">03</span><div class="glare"></div>
+        <h3>Allergens &amp; labelling</h3>
+        <div class="ptags"><span class="ptag">Allergen management</span><span class="ptag">Natasha's Law / PPDS</span><span class="ptag">FIR 2011 · EU 1169/2011</span><span class="ptag">QUID</span><span class="ptag">Nutrition declarations</span><span class="ptag">Ingredient list discipline</span></div></div>
+      <div class="tilt"><span class="num">04</span><div class="glare"></div>
+        <h3>NPD &amp; commercial</h3>
+        <div class="ptags"><span class="ptag">New Product Development</span><span class="ptag">Formulation trials</span><span class="ptag">Sensory analysis</span><span class="ptag">Nutritional profiling</span><span class="ptag">Plant-based development</span><span class="ptag">Sustainable packaging</span><span class="ptag">Competitor benchmarking</span><span class="ptag">SWOT</span><span class="ptag">Consumer personas</span><span class="ptag">4Ps marketing</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section class="edu" id="education">
+  <div class="ebg"></div>
+  <div class="edu-inner">
+    <p class="sec-tag">Background</p>
+    <h3 class="fade-up">MSc Food Innovation</h3>
+    <p class="where fade-up">University of Greenwich — London, UK</p>
+    <div class="edu-points">
+      <div class="fade-up">Product development from concept through formulation, safety planning and labelling.</div>
+      <div class="fade-up">Hands-on laboratory work: formulation trials, sensory evaluation, nutritional analysis.</div>
+      <div class="fade-up">UK &amp; EU food law in practice: FIR 2011, allergen regulation, HACCP principles.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="sec-tag" style="justify-content:center">Next step</p>
+    <h2 class="big">
+      <span class="row"><span>Let's make food</span></span>
+      <span class="row"><span class="serif">safer, together.</span></span>
+    </h2>
+    <p>Based in London. Available now for QC, QA and NPD roles. If you need someone who
+    treats food safety as a craft — and lives it on every shift — let's talk.</p>
+    <div class="btn-row">
+      <a class="btn btn-solid" href="mailto:manojvenkata1999@gmail.com">manojvenkata1999@gmail.com</a>
+      <a class="btn btn-line" href="#" aria-label="LinkedIn profile (add your URL)">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Venkata Manoj Kumar Gonugunta</span>
+  <span>Food QC · QA · NPD — London, UK</span>
+  <span>Photography: Unsplash</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script>
+(function(){
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches
+    || new URLSearchParams(location.search).has('static');
+  const hasGsap = typeof gsap !== 'undefined';
+  const isMobile = matchMedia('(max-width: 780px)').matches || ('ontouchstart' in window && innerWidth < 900);
+  const loader = document.getElementById('loader');
+
+  /* ---------- preloader ---------- */
+  function hideLoader(cb){
+    let done=false;
+    const finish=()=>{ if(done) return; done=true; loader.style.display='none'; cb&&cb(); };
+    setTimeout(finish, 2400);
+    if(!hasGsap || reduced){ finish(); return; }
+    const num=document.getElementById('lnum'), bar=document.getElementById('lbar');
+    const o={v:0};
+    gsap.to(o,{v:100,duration:1.0,ease:'power2.inOut',
+      onUpdate:()=>{num.textContent=Math.round(o.v);bar.style.transform=`scaleX(${o.v/100})`},
+      onComplete:()=>{gsap.to(loader,{yPercent:-100,duration:.7,ease:'power4.inOut',onComplete:finish});}
+    });
+  }
+
+  /* ===================== HERO — GALAXY DOT FIELD =====================
+     Two layers:
+       AMBIENT — drifting twinkling starfield (universe / milky way feel)
+       MORPH   — forms food shapes + UK food-safety keywords, then scatters
+     Plus occasional shooting stars. Mobile gets fewer dots, no DPR,
+     30fps cap, pause when off-screen / tab hidden. */
+  (function(){
+    const cv = document.getElementById('dotField');
+    if(!cv) return;
+    const ctx = cv.getContext('2d');
+    const DPR = isMobile ? 1 : Math.min(devicePixelRatio||1, 2);
+    let W=0, H=0;
+
+    function size(){
+      W = cv.clientWidth = cv.offsetWidth;
+      H = cv.clientHeight = cv.offsetHeight;
+      cv.width = W*DPR; cv.height = H*DPR;
+      ctx.setTransform(DPR,0,0,DPR,0,0);
+    }
+
+    const off = document.createElement('canvas');
+    const o = off.getContext('2d');
+    function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=(Math.random()*(i+1))|0;[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
+
+    function sampleText(text){
+      const padX = W * (isMobile?0.06:0.08);
+      const maxW = W - padX*2;
+      let fs = Math.min(H*0.42, W*0.22);
+      o.font = `900 ${fs}px Syne, sans-serif`;
+      while(o.measureText(text).width>maxW && fs>20){fs-=4; o.font=`900 ${fs}px Syne, sans-serif`;}
+      const tw = Math.ceil(o.measureText(text).width)+20;
+      const th = Math.ceil(fs*1.18);
+      off.width = tw; off.height = th;
+      o.font = `900 ${fs}px Syne, sans-serif`;
+      o.textBaseline='middle'; o.textAlign='center'; o.fillStyle='#fff';
+      o.clearRect(0,0,tw,th); o.fillText(text, tw/2, th/2);
+      const d = o.getImageData(0,0,tw,th).data, pts=[];
+      const step = Math.max(4, Math.round(fs/(isMobile?14:20)));
+      const ox=(W-tw)/2, oy=(H-th)/2;
+      for(let y=0;y<th;y+=step)for(let x=0;x<tw;x+=step)
+        if(d[(y*tw+x)*4+3]>140) pts.push([x+ox+(Math.random()-.5)*1.5, y+oy+(Math.random()-.5)*1.5]);
+      return shuffle(pts);
+    }
+
+    function roundRect(c,x,y,w,h,r){c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath();}
+    function sampleShape(draw){
+      const dim = Math.min(W, H) * 0.7;
+      const cx = W/2, cy = H/2;
+      off.width = Math.round(dim); off.height = Math.round(dim);
+      o.clearRect(0,0,off.width,off.height); o.fillStyle='#fff';
+      draw(o, off.width);
+      const d = o.getImageData(0,0,off.width,off.height).data, pts=[];
+      const step = isMobile?5:4;
+      const ox = cx - dim/2, oy = cy - dim/2;
+      for(let y=0;y<off.height;y+=step)for(let x=0;x<off.width;x+=step)
+        if(d[(y*off.height+x)*4+3]>140) pts.push([x+ox+(Math.random()-.5)*1.5, y+oy+(Math.random()-.5)*1.5]);
+      return shuffle(pts);
+    }
+
+    /* shape draw fns */
+    const cracker=(c,S)=>{const r=S*0.08;roundRect(c,S*0.18,S*0.18,S*0.64,S*0.64,r);c.fill();
+      c.globalCompositeOperation='destination-out';
+      for(let i=0;i<4;i++)for(let j=0;j<4;j++){c.beginPath();c.arc(S*(0.28+i*0.15),S*(0.28+j*0.15),S*0.028,0,7);c.fill();}
+      c.globalCompositeOperation='source-over';};
+    const croissant=(c,S)=>{c.beginPath();
+      c.moveTo(S*0.18,S*0.55);
+      c.bezierCurveTo(S*0.18,S*0.22,S*0.82,S*0.22,S*0.84,S*0.58);
+      c.bezierCurveTo(S*0.78,S*0.74,S*0.68,S*0.66,S*0.66,S*0.58);
+      c.bezierCurveTo(S*0.64,S*0.4,S*0.4,S*0.4,S*0.38,S*0.58);
+      c.bezierCurveTo(S*0.36,S*0.72,S*0.24,S*0.72,S*0.18,S*0.55);
+      c.closePath();c.fill();
+      c.globalCompositeOperation='destination-out';c.lineWidth=S*0.018;
+      for(let i=0;i<5;i++){c.beginPath();c.moveTo(S*(0.32+i*0.08),S*0.36);c.lineTo(S*(0.28+i*0.08),S*0.56);c.stroke();}
+      c.globalCompositeOperation='source-over';};
+    const mango=(c,S)=>{c.beginPath();
+      c.moveTo(S*0.5,S*0.24);
+      c.bezierCurveTo(S*0.82,S*0.28,S*0.88,S*0.62,S*0.56,S*0.82);
+      c.bezierCurveTo(S*0.5,S*0.85,S*0.46,S*0.83,S*0.44,S*0.8);
+      c.bezierCurveTo(S*0.18,S*0.64,S*0.2,S*0.3,S*0.5,S*0.24);
+      c.closePath();c.fill();
+      c.beginPath();c.ellipse(S*0.58,S*0.22,S*0.08,S*0.035,-.5,0,7);c.fill();
+      c.fillRect(S*0.49,S*0.2,S*0.018,S*0.08);};
+    const leaf=(c,S)=>{c.beginPath();c.moveTo(S*0.5,S*0.18);
+      c.bezierCurveTo(S*0.82,S*0.32,S*0.84,S*0.66,S*0.5,S*0.84);
+      c.bezierCurveTo(S*0.16,S*0.66,S*0.18,S*0.32,S*0.5,S*0.18);c.fill();
+      c.globalCompositeOperation='destination-out';c.lineWidth=S*0.024;
+      c.beginPath();c.moveTo(S*0.5,S*0.22);c.lineTo(S*0.5,S*0.8);c.stroke();
+      c.globalCompositeOperation='source-over';};
+    const apple=(c,S)=>{c.beginPath();c.moveTo(S*0.5,S*0.32);
+      c.bezierCurveTo(S*0.34,S*0.2,S*0.16,S*0.32,S*0.18,S*0.52);
+      c.bezierCurveTo(S*0.2,S*0.74,S*0.36,S*0.84,S*0.5,S*0.8);
+      c.bezierCurveTo(S*0.64,S*0.84,S*0.8,S*0.74,S*0.82,S*0.52);
+      c.bezierCurveTo(S*0.84,S*0.32,S*0.66,S*0.2,S*0.5,S*0.32);c.fill();
+      c.beginPath();c.ellipse(S*0.58,S*0.22,S*0.085,S*0.045,-.6,0,7);c.fill();
+      c.fillRect(S*0.49,S*0.18,S*0.022,S*0.1);};
+
+    let patterns=[];
+    function rebuildPatterns(){
+      patterns=[
+        sampleShape(cracker), sampleText('HACCP'),
+        sampleShape(croissant), sampleText('BRCGS'),
+        sampleShape(mango), sampleText('GMP'),
+        sampleShape(apple), sampleText('CCP'),
+        sampleShape(leaf), sampleText('FIR 2011'),
+        sampleText("NATASHA'S LAW"), sampleText('FIFO'),
+        sampleText('ALLERGEN'), sampleText('FOOD SAFETY'),
+      ];
+    }
+
+    /* ---- AMBIENT starfield ---- */
+    const N_AMBIENT = isMobile ? 280 : 850;
+    const ambient = [];
+    function initAmbient(){
+      ambient.length=0;
+      for(let i=0;i<N_AMBIENT;i++){
+        const tier = Math.random();
+        // dust: tiny + faint. mid: medium. bright: rare + larger
+        const isBright = tier > 0.96;
+        const isMid = tier > 0.82;
+        const r = isBright ? 1.6+Math.random()*1.4 : isMid ? 1.0+Math.random()*.6 : 0.4+Math.random()*.6;
+        // diagonal milky way density bias (more stars near the diagonal band)
+        let x = Math.random()*W, y = Math.random()*H;
+        // 25% of stars: place along diagonal band for galaxy density feel
+        if(Math.random()<0.28){
+          const t = Math.random();
+          const cx = W*(0.2 + t*0.6), cy = H*(0.75 - t*0.55); // diagonal from bottom-left to top-right
+          const spread = H*0.18;
+          x = cx + (Math.random()-.5)*spread;
+          y = cy + (Math.random()-.5)*spread;
+        }
+        // colour: mostly cool starlight, accents of lime + violet + cyan for nebula
+        let col;
+        const c = Math.random();
+        if(c < 0.05) col = '198,244,77';      // lime accent
+        else if(c < 0.10) col = '180,150,230'; // violet star
+        else if(c < 0.14) col = '160,200,240'; // cyan-white
+        else col = '242,240,233';              // off-white
+        ambient.push({
+          x, y,
+          vx: (Math.random()-.5) * 0.07,
+          vy: (Math.random()-.5) * 0.04,
+          r, baseO: 0.18 + Math.random()*0.55,
+          twS: 0.4 + Math.random()*1.4,
+          twP: Math.random()*6.28,
+          col, isBright,
+        });
+      }
+    }
+
+    /* ---- MORPH dots: form patterns, scatter, form, scatter ---- */
+    const N_MORPH = isMobile ? 200 : 480;
+    const morph = [];
+    function initMorph(){
+      morph.length=0;
+      for(let i=0;i<N_MORPH;i++)morph.push({
+        x: Math.random()*W, y: Math.random()*H,
+        tx: Math.random()*W, ty: Math.random()*H,
+        col: Math.random()<0.72 ? '198,244,77' : '242,240,233',
+        o: 0.55 + Math.random()*0.4,
+        r: 1.0 + Math.random()*1.3,
+        ph: Math.random()*6.28,
+      });
+    }
+    let shape = 0;
+    function assignMorph(){
+      const pts = patterns[shape];
+      if(!pts || !pts.length) return;
+      for(let i=0;i<morph.length;i++){
+        const t = pts[i % pts.length];
+        morph[i].tx = t[0]; morph[i].ty = t[1];
+      }
+    }
+    function scatterMorph(){
+      for(const p of morph){
+        p.tx = Math.random()*W;
+        p.ty = Math.random()*H;
+      }
+    }
+
+    /* ---- shooting stars ---- */
+    const shooters = [];
+    function spawnShooter(){
+      // come from upper portion, streak down-right
+      const fromLeft = Math.random()<0.5;
+      shooters.push({
+        x: fromLeft ? -40 : W+40,
+        y: Math.random()*H*0.55,
+        vx: (fromLeft? 1 : -1) * (5 + Math.random()*5),
+        vy: 1.5 + Math.random()*2.5,
+        life: 1,
+      });
+    }
+    let shooterTimer = 0;
+
+    function reset(){ size(); rebuildPatterns(); initAmbient(); initMorph(); assignMorph(); }
+    size(); rebuildPatterns(); initAmbient(); initMorph(); assignMorph();
+    let resizeT;
+    addEventListener('resize',()=>{clearTimeout(resizeT);resizeT=setTimeout(reset,200);});
+
+    if(reduced){
+      // static rendering: draw ambient + first pattern, no animation
+      for(const s of ambient){
+        ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,7);
+        ctx.fillStyle=`rgba(${s.col},${s.baseO})`;ctx.fill();
+      }
+      const pts = patterns[0];
+      ctx.fillStyle = 'rgba(198,244,77,.7)';
+      for(const p of pts){ctx.beginPath();ctx.arc(p[0],p[1],1.3,0,7);ctx.fill();}
+      return;
+    }
+
+    /* ---- visibility gating ---- */
+    let visible = true, tabVisible = !document.hidden;
+    if('IntersectionObserver' in window){
+      const io = new IntersectionObserver(es=>{visible = es[0].isIntersecting;}, {threshold:0.05});
+      io.observe(cv);
+    }
+    document.addEventListener('visibilitychange',()=>{tabVisible = !document.hidden;});
+
+    /* ---- main loop ---- */
+    const frameInterval = isMobile ? 33 : 16;
+    const formMs = isMobile ? 3600 : 3000;
+    const scatterMs = 1400;
+    let lastT = 0, phaseStart = performance.now(), phase = 'forming';
+
+    function loop(t){
+      requestAnimationFrame(loop);
+      if(!visible || !tabVisible) { lastT = t; return; }
+      if(t - lastT < frameInterval) return;
+      lastT = t;
+
+      // phase machine
+      if(phase==='forming' && t - phaseStart > formMs){
+        phase='scattering'; phaseStart=t; scatterMorph();
+      } else if(phase==='scattering' && t - phaseStart > scatterMs){
+        phase='forming'; phaseStart=t;
+        shape = (shape+1) % patterns.length;
+        assignMorph();
+      }
+
+      // shooting stars (desktop only — mobile saves frames)
+      if(!isMobile){
+        shooterTimer -= 1;
+        if(shooterTimer <= 0 && shooters.length < 2){
+          if(Math.random()<0.015) spawnShooter();
+          shooterTimer = 30;
+        }
+      }
+
+      ctx.clearRect(0,0,W,H);
+
+      /* ---- ambient layer ---- */
+      const tw = t * 0.001;
+      for(let i=0;i<ambient.length;i++){
+        const s = ambient[i];
+        s.x += s.vx; s.y += s.vy;
+        if(s.x < -5) s.x = W+5; else if(s.x > W+5) s.x = -5;
+        if(s.y < -5) s.y = H+5; else if(s.y > H+5) s.y = -5;
+        const tw2 = (Math.sin(tw*s.twS + s.twP) + 1) * 0.5; // 0..1
+        const o = s.baseO * (0.45 + tw2*0.55);
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, 7);
+        ctx.fillStyle = `rgba(${s.col},${o})`;
+        ctx.fill();
+        if(s.isBright){ // soft halo on bright stars
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r*2.4, 0, 7);
+          ctx.fillStyle = `rgba(${s.col},${o*0.15})`;
+          ctx.fill();
+        }
+      }
+
+      /* ---- morph layer ---- */
+      const ease = phase==='scattering' ? 0.035 : (isMobile ? 0.065 : 0.075);
+      const wobAmp = isMobile ? 0.7 : 1.1;
+      for(let i=0;i<morph.length;i++){
+        const p = morph[i];
+        p.x += (p.tx - p.x) * ease;
+        p.y += (p.ty - p.y) * ease;
+        const w = Math.sin(tw*1.4 + p.ph) * wobAmp;
+        ctx.beginPath();
+        ctx.arc(p.x + w, p.y - w, p.r, 0, 7);
+        ctx.fillStyle = `rgba(${p.col},${p.o})`;
+        ctx.fill();
+      }
+
+      /* ---- shooting stars ---- */
+      for(let i=shooters.length-1;i>=0;i--){
+        const s = shooters[i];
+        s.x += s.vx; s.y += s.vy; s.life -= 0.018;
+        const tx = s.x - s.vx*8, ty = s.y - s.vy*8;
+        const grad = ctx.createLinearGradient(tx,ty,s.x,s.y);
+        grad.addColorStop(0,'rgba(242,240,233,0)');
+        grad.addColorStop(1,`rgba(242,240,233,${Math.max(0,s.life*0.85)})`);
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = 1.2;
+        ctx.lineCap = 'round';
+        ctx.beginPath();ctx.moveTo(tx,ty);ctx.lineTo(s.x,s.y);ctx.stroke();
+        if(s.life <= 0 || s.x < -100 || s.x > W+100 || s.y > H+100) shooters.splice(i,1);
+      }
+    }
+    requestAnimationFrame(loop);
+  })();
+
+  if(!hasGsap || reduced){
+    document.querySelectorAll('[data-count]').forEach(el=>el.textContent=el.dataset.count);
+    hideLoader();
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ---------- Lenis: desktop only ---------- */
+  let lenis = null;
+  if(typeof Lenis !== 'undefined' && !isMobile){
+    lenis = new Lenis({
+      duration: 1.15,
+      easing: t => Math.min(1, 1.001 - Math.pow(2,-10*t)),
+      smoothWheel: true,
+      smoothTouch: false,
+    });
+    function raf(t){lenis.raf(t); requestAnimationFrame(raf);}
+    requestAnimationFrame(raf);
+    lenis.on('scroll', ScrollTrigger.update);
+  }
+
+  /* ---------- intro animations ---------- */
+  hideLoader(()=>{
+    /* hero tagline subtle fade */
+    gsap.from('.hero-tagline',{opacity:0,y:8,duration:1.2,delay:.4,ease:'power2.out'});
+    gsap.from('.hero-cue',{opacity:0,duration:1,delay:.7,ease:'power2.out'});
+  });
+
+  /* ---------- progress bar ---------- */
+  gsap.to('#progress i',{scaleX:1,ease:'none',
+    scrollTrigger:{trigger:document.body,start:'top top',end:'bottom bottom',scrub:.3}});
+
+  /* ---------- INTRO NAME POP-UP on scroll ---------- */
+  gsap.set('.big-name .row > span',{yPercent:118});
+  ScrollTrigger.create({
+    trigger:'.intro', start:'top 75%', once:true,
+    onEnter:()=>{
+      const tl=gsap.timeline();
+      tl.from('.intro-kicker',{y:18,opacity:0,duration:.6,ease:'power3.out'})
+        .to('.big-name .row > span',{yPercent:0,duration:.95,ease:'power4.out',stagger:.1},'-=.2')
+        .from('.intro-tag',{y:18,opacity:0,duration:.7,ease:'power3.out'},'-=.4')
+        .from('.qn',{y:24,opacity:0,duration:.55,ease:'power3.out',stagger:.06},'-=.3');
+    }
+  });
+
+  /* ---------- generic reveals ---------- */
+  gsap.utils.toArray('.fade-up').forEach(el=>{
+    if(el.closest('.intro')) return; /* handled by intro timeline */
+    gsap.from(el,{y:32,opacity:0,duration:.85,ease:'power3.out',
+      scrollTrigger:{trigger:el,start:'top 88%'}});
+  });
+
+  /* ---------- counters ---------- */
+  gsap.utils.toArray('[data-count]').forEach(el=>{
+    const target=+el.dataset.count;
+    ScrollTrigger.create({trigger:el,start:'top 88%',once:true,
+      onEnter:()=>gsap.to(el,{innerText:target,duration:1.4,ease:'power2.out',snap:{innerText:1}})});
+  });
+
+  /* ---------- about parallax ---------- */
+  if(!isMobile){
+    gsap.to('.about-img .img',{yPercent:14,ease:'none',
+      scrollTrigger:{trigger:'.about-img',start:'top bottom',end:'bottom top',scrub:true}});
+  }
+
+  /* ---------- thesis doc subtle reveal ---------- */
+  gsap.fromTo('.thesis-doc',{rotate:isMobile?0:-1,y:30},{rotate:0,y:0,ease:'power3.out',
+    scrollTrigger:{trigger:'.thesis-doc',start:'top 80%'}});
+
+  /* ---------- horizontal slider — desktop only ---------- */
+  const mm=gsap.matchMedia();
+  mm.add('(min-width: 821px)',()=>{
+    document.documentElement.classList.add('hslide');
+    const track=document.getElementById('htrack');
+    const dist=()=>track.scrollWidth-innerWidth;
+    const tween=gsap.to(track,{x:()=>-dist(),ease:'none',
+      scrollTrigger:{trigger:'.hwrap',start:'top top',end:()=>'+='+dist(),
+        pin:true,scrub:1,invalidateOnRefresh:true,anticipatePin:1}});
+    gsap.utils.toArray('.hpanel .pbg').forEach(bg=>{
+      gsap.fromTo(bg,{xPercent:-6},{xPercent:6,ease:'none',
+        scrollTrigger:{trigger:bg.parentElement,containerAnimation:tween,start:'left right',end:'right left',scrub:true}});
+    });
+    gsap.utils.toArray('.hpanel .pcontent').forEach(c=>{
+      gsap.from(c,{y:50,opacity:0,duration:.8,
+        scrollTrigger:{trigger:c,containerAnimation:tween,start:'left 70%'}});
+    });
+    return ()=>document.documentElement.classList.remove('hslide');
+  });
+  mm.add('(max-width: 820px)',()=>{
+    gsap.utils.toArray('.hpanel .pcontent').forEach(c=>{
+      gsap.from(c,{y:30,opacity:0,duration:.7,scrollTrigger:{trigger:c,start:'top 85%'}});
+    });
+  });
+
+  /* ---------- case study parallax + cards ---------- */
+  gsap.utils.toArray('.case').forEach(sec=>{
+    if(!isMobile){
+      gsap.fromTo(sec.querySelector('.cbg'),{yPercent:-10},{yPercent:10,ease:'none',
+        scrollTrigger:{trigger:sec,start:'top bottom',end:'bottom top',scrub:true}});
+    }
+    gsap.from(sec.querySelectorAll('.ccard'),{y:40,opacity:0,duration:.7,ease:'power3.out',stagger:.08,
+      scrollTrigger:{trigger:sec.querySelector('.case-cols'),start:'top 82%'}});
+  });
+
+  /* ---------- education parallax ---------- */
+  if(!isMobile){
+    gsap.fromTo('.edu .ebg',{yPercent:-12},{yPercent:12,ease:'none',
+      scrollTrigger:{trigger:'.edu',start:'top bottom',end:'bottom top',scrub:true}});
+  }
+
+  /* ---------- contact headline ---------- */
+  gsap.set('.contact .row > span',{yPercent:118});
+  ScrollTrigger.create({trigger:'.contact',start:'top 75%',once:true,
+    onEnter:()=>gsap.to('.contact .row > span',{yPercent:0,duration:.95,ease:'power4.out',stagger:.12})});
+
+  /* ---------- 3D tilt — desktop only ---------- */
+  if(!isMobile){
+    function tilt(el,maxDeg){
+      el.addEventListener('mousemove',e=>{
+        const r=el.getBoundingClientRect();
+        const px=(e.clientX-r.left)/r.width, py=(e.clientY-r.top)/r.height;
+        el.style.setProperty('--gx',px*100+'%');el.style.setProperty('--gy',py*100+'%');
+        gsap.to(el,{rotateY:(px-.5)*maxDeg*2,rotateX:(0.5-py)*maxDeg*2,
+          transformPerspective:900,duration:.5,ease:'power2.out'});
+      });
+      el.addEventListener('mouseleave',()=>gsap.to(el,{rotateX:0,rotateY:0,duration:.7,ease:'elastic.out(1,.5)'}));
+    }
+    document.querySelectorAll('.tilt').forEach(el=>tilt(el,5));
+  }
+
+  /* ---------- anchor scroll ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const t=document.querySelector(a.getAttribute('href'));
+      if(!t) return;
+      e.preventDefault();
+      if(lenis){ lenis.scrollTo(t,{offset:-40,duration:1.2}); }
+      else { t.scrollIntoView({behavior:'smooth'}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
